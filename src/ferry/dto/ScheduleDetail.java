@@ -58,5 +58,37 @@ public class ScheduleDetail implements Serializable
 		super();
 	}
 
-}
+        
+    // Frontend
+    public ScheduleDetail(Date endDate, Date startDate, Set<DepartureDetail> departureDetail) {
+        this.endDate = endDate;
+        this.startDate = startDate;
+        this.departureDetail = departureDetail;
+    }
+    
+    // Backend
+    public ScheduleDetail(int id, Date endDate, Date startDate, Set<DepartureDetail> departureDetail) {
+        this.id = id;
+        this.endDate = endDate;
+        this.startDate = startDate;
+        this.departureDetail = departureDetail;
+    }
 
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public Set<DepartureDetail> getDepartureDetail() {
+        return departureDetail;
+    }
+    
+    
+}
