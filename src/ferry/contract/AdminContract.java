@@ -3,21 +3,13 @@ package ferry.contract;
 import ferry.dto.FerryDetail;
 import ferry.dto.RouteDetail;
 import ferry.dto.ScheduleDetail;
-import ferry.dto.TravelingEntityDetail;
 import ferry.eto.DataAccessException;
 import ferry.eto.NoSuchFerryException;
 import ferry.eto.NoSuchHarbourException;
-import ferry.eto.NoSuchRouteException;
 import ferry.eto.NoSuchScheduleException;
-import ferry.eto.OverBookedException;
-import ferry.eto.NoSuchTravelingEntityException;
 import java.util.Collection;
 import java.util.Date;
 import ferry.dto.FerryIdentifier;
-import ferry.dto.SchedulesIdentifier;
-import ferry.dto.RouteIdentifier;
-import ferry.dto.TravelingEntityIdentifier;
-import ferry.dto.DepartureDetail;
 
 /**
  *
