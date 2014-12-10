@@ -10,6 +10,7 @@ import ferry.eto.NoSuchScheduleException;
 import java.util.Collection;
 import java.util.Date;
 import ferry.dto.FerryIdentifier;
+import ferry.dto.ScheduleIdentifier;
 
 /**
  *
@@ -85,5 +86,17 @@ public interface AdminContract {
      * @post the collection of RouteDetails has been returned
      */
     public Collection<RouteDetail> showRoutes() throws NoSuchHarbourException;
+    
+    /**
+     * Assigns a ferry to a schedule
+     * @Pre the ferry and schedule must exist
+     * @throws DataAccessException if the data can not be stored.
+     * @throws NoSuchFerryException if ferry dont exist
+     * @throws NoSuchScheduleException  if schedule dont exist
+     * @param ferryId
+     * @param scheduleId
+     * @post the ferry have been assigned to the schedule
+     */
+    public void assignFerryToSchedule(FerryIdentifier ferryId, ScheduleIdentifier scheduleId) throws DataAccessException, NoSuchFerryException,NoSuchScheduleException;
 }
     

@@ -1,74 +1,45 @@
 package ferry.dto;
+
 import java.io.Serializable;
 import java.util.Set;
-import java.util.HashSet;
 import java.util.Date;
-
 
 /**
  * <!-- begin-user-doc -->
- * <!--  end-user-doc  -->
- * @generated
+ * <!-- end-user-doc --> @generated
  */
+public class ScheduleDetail extends ScheduleIdentifier implements Serializable {
 
-public class ScheduleDetail implements Serializable
-{
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	
-	private Date endDate;
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	
-	private Date startDate;
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	
-	private int id;
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 * @ordered
-	 */
-	
-	public Set<DepartureDetail> departureDetail;
-	
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!--  end-user-doc  -->
-	 * @generated
-	 */
-	public ScheduleDetail(){
-		super();
-	}
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc --> @generated @ordered
+     */
 
-        
-    // Frontend
-    public ScheduleDetail(Date endDate, Date startDate, Set<DepartureDetail> departureDetail) {
-        this.endDate = endDate;
-        this.startDate = startDate;
-        this.departureDetail = departureDetail;
+    private Date endDate;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc --> @generated @ordered
+     */
+    private Date startDate;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc --> @generated @ordered
+     */
+    public Set<DepartureDetail> departureDetail;
+
+    /**
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc --> @generated
+     */
+    public ScheduleDetail() {
+        super();
     }
-    
-    // Backend
+
+    // Frontend
     public ScheduleDetail(int id, Date endDate, Date startDate, Set<DepartureDetail> departureDetail) {
-        this.id = id;
+        super(id);
         this.endDate = endDate;
         this.startDate = startDate;
         this.departureDetail = departureDetail;
@@ -82,13 +53,7 @@ public class ScheduleDetail implements Serializable
         return startDate;
     }
 
-    public int getId() {
-        return id;
-    }
-
     public Set<DepartureDetail> getDepartureDetail() {
         return departureDetail;
     }
-    
-    
 }

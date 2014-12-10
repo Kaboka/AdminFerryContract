@@ -8,19 +8,13 @@ import java.util.HashSet;
  * <!-- begin-user-doc -->
  * <!-- end-user-doc --> @generated
  */
-public class FerryDetail implements Serializable {
+public class FerryDetail extends FerryIdentifier implements Serializable {
 
     /**
      * <!-- begin-user-doc -->
      * <!-- end-user-doc --> @generated @ordered
      */
     private String name;
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc --> @generated @ordered
-     */
-    private int id;
 
     /**
      * <!-- begin-user-doc -->
@@ -37,13 +31,9 @@ public class FerryDetail implements Serializable {
     }
 
     public FerryDetail(int id, String name, Set<FerryConfigDetail> ferryConfigDetail) {
+        super(id);
         this.name = name;
-        this.id = id;
         this.ferryConfigDetail = ferryConfigDetail;
-    }
-
-    public int getId() {
-        return id;
     }
 
     public Set<FerryConfigDetail> getFerryConfigDetail() {
