@@ -1,5 +1,6 @@
 package ferry.dto;
 
+import ferry.dto.DepartureDetail;
 import java.io.Serializable;
 
 /**
@@ -8,47 +9,37 @@ import java.io.Serializable;
  */
 public class FerryConfigDetail implements Serializable{
 
-    /**
-     * <!-- begin-user-doc -->
-     * <!--  end-user-doc  --> @generated @ordered
-     */
-
     private int peopleCapacity;
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!--  end-user-doc  --> @generated @ordered
-     */
     private int vehicleCapacity;
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!--  end-user-doc  --> @generated @ordered
-     */
     private int weightCapacity;
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!--  end-user-doc  --> @generated @ordered
-     */
     private int id;
 
-    /**
-     * <!-- begin-user-doc -->
-     * <!--  end-user-doc  --> @generated @ordered
-     */
-    public DepartureDetail departureDetail;
-
-    /**
-     * <!-- begin-user-doc -->
-     * <!--  end-user-doc  --> @generated
-     */
     public FerryConfigDetail() {
         super();
     }
 
-    public DepartureDetail getDepartureDetail() {
-        return departureDetail;
+    public FerryConfigDetail(int peopleCapacity, int vehicleCapacity, int weightCapacity, int id) {
+        this.peopleCapacity = peopleCapacity;
+        this.vehicleCapacity = vehicleCapacity;
+        this.weightCapacity = weightCapacity;
+        this.id = id;
     }
 
+    public int getPeopleCapacity() {
+        return peopleCapacity;
+    }
+
+    public int getVehicleCapacity() {
+        return vehicleCapacity;
+    }
+
+    public int getWeightCapacity() {
+        return weightCapacity;
+    }
+
+    public int getId() {
+        return id;
+    }
+    
+    
 }

@@ -1,22 +1,25 @@
 package ferry.contract;
 
+import ferry.dto.FerryConfigDetail;
 import ferry.dto.FerryDetail;
+import ferry.dto.FerryIdentifier;
 import ferry.dto.RouteDetail;
 import ferry.dto.ScheduleDetail;
+import ferry.dto.ScheduleIdentifier;
 import ferry.eto.DataAccessException;
 import ferry.eto.NoSuchFerryException;
 import ferry.eto.NoSuchHarbourException;
 import ferry.eto.NoSuchScheduleException;
 import java.util.Collection;
 import java.util.Date;
-import ferry.dto.FerryIdentifier;
-import ferry.dto.ScheduleIdentifier;
+import javax.ejb.Remote;
 
 /**
  *
  * @author Kasper
  * 
  */
+@Remote
 public interface AdminContract {
 
     /**
@@ -98,5 +101,15 @@ public interface AdminContract {
      * @post the ferry have been assigned to the schedule
      */
     public void assignFerryToSchedule(FerryIdentifier ferryId, ScheduleIdentifier scheduleId) throws DataAccessException, NoSuchFerryException,NoSuchScheduleException;
+    
+    /**
+     * 
+     * Shows ferry configs
+     * @pre There must exist at least one ferryconfig in the system and it must not be null
+     * @return Collection<FerryConfigDetail>
+     * @throws DataAccessException if data cant accessed
+     * @post the collection of ferries has been returned
+     */
+    public Collection<FerryConfigDetail> showFerryConfigs() throws DataAccessException;
 }
     

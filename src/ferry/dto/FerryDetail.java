@@ -2,7 +2,6 @@ package ferry.dto;
 
 import java.io.Serializable;
 import java.util.Set;
-import java.util.HashSet;
 
 /**
  * <!-- begin-user-doc -->
@@ -39,4 +38,10 @@ public class FerryDetail extends FerryIdentifier implements Serializable {
     public Set<FerryConfigDetail> getFerryConfigDetail() {
         return ferryConfigDetail;
     }
+
+    public String getName() {
+        return name;
+    }
+    
+    
 }
