@@ -6,7 +6,9 @@
 
 package ferry.dto;
 
-public class HarbourSummary {
+import java.io.Serializable;
+
+public class HarbourSummary implements Serializable {
 
     private String name;
     private int id;
