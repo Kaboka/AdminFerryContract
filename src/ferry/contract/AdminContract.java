@@ -7,6 +7,7 @@ import ferry.dto.RouteDetail;
 import ferry.dto.ScheduleDetail;
 import ferry.dto.ScheduleIdentifier;
 import ferry.eto.DataAccessException;
+import ferry.eto.InvalidDateException;
 import ferry.eto.NoSuchFerryException;
 import ferry.eto.NoSuchHarbourException;
 import ferry.eto.NoSuchScheduleException;
@@ -52,10 +53,11 @@ public interface AdminContract {
      *
      * @pre the schedule must not already exist in the system
      * @throws DataAccessException if the data cant be stored.
+     * @throws InvalidDateException if schedule or departure date is invalid
      * @param schedule
      * @post schedule have been saved.
      */
-    public void addSchedule(ScheduleDetail schedule) throws DataAccessException;
+    public void addSchedule(ScheduleDetail schedule) throws DataAccessException, InvalidDateException ;
 
     /**
      * Returns a list of schedules
